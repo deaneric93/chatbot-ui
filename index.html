@@ -1,0 +1,122 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" class="h-100">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Chatbot UI</title>
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Custom  Style CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="d-flex flex-column h-100">
+    <header>
+        <!-- Fixed navbar -->
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Fixed navbar</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Link</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Begin page content -->
+    <main class="flex-shrink-0">
+        <div class="container">
+            <h1 class="mt-5">HOME PAGE</h1>
+        </div>
+    </main>
+
+    <div class="chat-box" id="chatBox">
+        <div class="close" onclick="unLoadChatbox()">
+            <i class="fas fa-times"></i>
+        </div>
+        <div class="upper-part">
+            <div class="upper-text">
+                <h2>IRIS</h2>
+                <div class="sub-title">
+                    <div><h4 class="d-inline">Hello</h4><span class="hand"><i class="fas fa-hand-paper"></i></span></div>
+                    <p class="mb-0">I am Iris, a Virtual Assistant</p>
+                    <p class="mb-0">How may I help you?</p>
+                </div>
+            </div>
+        </div>
+        <div class="bottom-part">
+            <div class="faq-section">
+                <div class="bot-icon"><i class="fas fa-robot"></i></div>
+                <div class="d-flex align-items-center faq-title">
+                    <h6 class="mb-0">Frequently Asked Questions</h6><span class="question-icon"><i class="fas fa-question"></i></span>
+                </div>
+                <div class="question ques-one" id="quOne">
+                    <p class="m-0">
+                        <span class="dot"><i class="fas fa-circle"></i></span>
+                        Can I redeem my FB before the original term?
+                    </p>
+                </div>
+                <div class="question ques-two" id="quTwo">
+                    <p class="m-0">
+                        <span class="dot"><i class="fas fa-circle"></i></span>
+                        How do I pay my Credit card bill?
+                    </p>
+                </div>
+                <div class="question ques-three" id="quThree">
+                    <p class="m-0">
+                        <span class="dot"><i class="fas fa-circle"></i></span>
+                        How can I get my Account Statement?
+                    </p>
+                </div>
+                <div class="question ques-four" id="quFour">
+                    <p class="m-0">
+                        <span class="dot"><i class="fas fa-circle"></i></span>
+                        What is the tenture of Fixed Deposit?
+                    </p>
+                </div>
+                <div class="text-center new-conv" id="newConv">
+                    <button type="button" class="btn btn-conv">
+                        <span class="message"><i class="far fa-comment-alt"></i></span>
+                        Start a New Conversation
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer mt-auto py-3 bg-light">
+        <div class="chat-icon-div" onclick="loadChatbox()">
+            <button type="button" class="btn btn-chat-icon" onclick="loadChatbox()">
+                <i class="far fa-comment"></i>
+            </button>
+        </div>
+        <div class="container">
+            <span class="text-muted">Place sticky footer content here.</span>
+        </div>
+    </footer>
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <!-- Custom JS -->
+    <script src="script.js" defer></script>
+</body>
+</html>
